@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capt. marvel</title>
+
+    <style>
+        #container {
+            display: relative;
+            margin: auto;
+
+            width: 600px;
+            height: 400px;
+
+            border-radius: 10px;
+            background-color: #b85a5b;
+            margin-top: auto;
+
+            transform: translateY(40%);
+        }
+
+        #content {
+            display: absolute;
+            width: 150px;
+
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            opacity: 0;
+        }
+
+        #capt-mar {
+            display: absolute;
+            transform: translateY(-92%);
+        }
+
+
+        #container:hover #content{
+            opacity: .5;
+            opacity: 1;
+            
+        }
+
+
+        #container:hover #capt-mar{
+            position: relative;
+            animation: movingOne 1s ease-out 0s 1 normal forwards;
+        }
+
+
+        @keyframes movingOne{
+            0%{
+                left: 0px;
+            }
+
+            100%{
+                left: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" onmouseover="hoverJS()" onmouseout="unhoverJS()">
+        <div id="content">
+            <h1>Captain Marvel</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum consequuntur impedit quam fugiat error
+                ea eius ipsa totam! Provident sequi neque libero ad laborum itaque nulla minima obcaecati dolores
+                mollitia.</p>
+        </div>
+
+        <img id="capt-mar" src="/images/cap-marvel.png" alt="Captain Marvel">
+    </div>
+</body>
+
+</html>
